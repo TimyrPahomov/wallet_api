@@ -31,7 +31,7 @@
 
 ```sh
 git clone https://github.com/TimyrPahomov/wallet_api.git
-cd test_task/
+cd wallet_api/
 ```
 
 3. Далее нужно осуществить сборку контейнеров:
@@ -40,7 +40,13 @@ cd test_task/
 docker compose up
 ```
 
-4. Затем следует открыть новый терминал, собрать статику приложения и выполнить миграции:
+4. Затем следует собрать статику приложения и выполнить миграции. 
+Для этого в новом терминале перейдите в корневую директорию проекта
+
+```sh
+cd wallet_api/
+```
+и выполните следующие команды:
 
 ```sh
 docker compose exec backend python manage.py collectstatic
